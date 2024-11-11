@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.petals-front, .petals-back {
+  width: 100vw;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.petals-front div, .petals-back div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+}
+.petals-front div img, .petals-back div img {
+  width: 100%;
+  height: 100%;
+}
+.petals-front div:nth-child(1), .petals-back div:nth-child(1) {
+  top: -10vh;
+  left: 10vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: -5s;
+}
+.petals-front div:nth-child(2), .petals-back div:nth-child(2) {
+  top: -10vh;
+  left: 20vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: -20s;
+}
+.petals-front div:nth-child(3), .petals-back div:nth-child(3) {
+  top: -10vh;
+  left: 30vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: 0s;
+}
+.petals-front div:nth-child(4), .petals-back div:nth-child(4) {
+  top: -10vh;
+  left: 40vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: -10s;
+}
+.petals-front div:nth-child(5), .petals-back div:nth-child(5) {
+  top: -10vh;
+  left: 50vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: -15s;
+}
+.petals-front div:nth-child(6), .petals-back div:nth-child(6) {
+  top: -10vh;
+  left: 60vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: -7s;
+}
+.petals-front div:nth-child(7), .petals-back div:nth-child(7) {
+  top: -10vh;
+  left: 70vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: -9s;
+}
+.petals-front div:nth-child(8), .petals-back div:nth-child(8) {
+  top: -10vh;
+  left: 80vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: 0s;
+}
+.petals-front div:nth-child(9), .petals-back div:nth-child(9) {
+  top: -10vh;
+  left: 90vw;
+  animation: animation1 30s linear infinite;
+  animation-delay: 2s;
+}
+
+.petals-back {
+  z-index: -1;
+}
+.petals-back div {
+  width: 10px;
+}
+.petals-back div img {
+  filter: blur(1px);
+  opacity: 0.8;
+}
+.petals-back div:nth-child(3) {
+  top: -10vh;
+  left: 15vw;
+  animation: animation1 40s linear infinite;
+  animation-delay: -15s;
+}
+.petals-back div:nth-child(2) {
+  top: -10vh;
+  left: 25vw;
+  animation: animation1 40s linear infinite;
+  animation-delay: -7s;
+}
+.petals-back div:nth-child(1) {
+  top: -10vh;
+  left: 45vw;
+  animation: animation1 40s linear infinite;
+  animation-delay: -9s;
+}
+.petals-back div:nth-child(5) {
+  top: -10vh;
+  left: 75vw;
+  animation: animation1 40s linear infinite;
+  animation-delay: 0s;
+}
+.petals-back div:nth-child(4) {
+  top: -10vh;
+  left: 85vw;
+  animation: animation1 40s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animation1 {
+  0% {
+    opacity: 0%;
+    transform: translateX(0px) rotate(0deg);
+  }
+  10% {
+    opacity: 100%;
+  }
+  50% {
+    transform: translateX(10px) rotate(360deg);
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    top: 90vh;
+    transform: translateX(-10px) rotate(0deg);
+  }
+}
+body {
+  font-family: "Playfair Display", serif;
+  overflow-x: hidden;
+}
+
+#above {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  background: #fffef7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3137254902);
+}
+#above .cover {
+  height: 100%;
+  padding: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#above .cover .cover-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#above .cover .cover-item .cover-cp {
+  text-transform: uppercase;
+  font-size: 48px;
+}
+#above .cover .cover-item .cover-and {
+  font-size: 24px;
+}
+#above .cover .cover-item .cover-date {
+  letter-spacing: 16px;
+}
+#above .cover .cover-item .cover-place {
+  letter-spacing: 5px;
+}
+#above .cover p {
+  font-size: 16px;
+}
+#above .cover h2 {
+  font-size: 16px;
+  font-weight: 900;
+}
+#above .above-empty {
+  width: 100%;
+  height: 100vh;
+}
+
+#under {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 200vh;
+  z-index: -1;
+  background: #fffef7;
+  position: fixed;
+  top: 0;
+}
+
+.foc {
+  position: absolute !important;
+  top: 100vh !important;
+}
+
+/*# sourceMappingURL=global.css.map */
