@@ -1,0 +1,159 @@
+@mixin flexcont ($dir: column, $jc: center, $ai: normal) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+  width: 100%;
+}
+// height port
+.v100 {
+  @include flexcont();
+  height: 100vh;
+}
+.v50 {
+  @include flexcont();
+  height: 50vh;
+}
+//.v25 {
+//  @include flexcont();
+//  height: 25vh;
+//}
+
+//text
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.pad-h {
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+.pad-v {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+
+
+#under {
+  @include flexcont();
+  width: 100vw;
+  z-index: -1;
+  background: #fffef7;
+  position: fixed;
+  top: 0;
+  padding-bottom: 5vh;
+
+  #hero {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    justify-content: space-between;
+    background: linear-gradient(#00000000 50%,rgba(255, 254, 247, 1)), url(images/hero-01.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    #hero-title {
+      #tit-dan {
+        font-size: 2rem;
+      }
+    }
+    #ayat {
+      font-size: 12px;
+    }
+  }
+  #mempelai {
+    p {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    h3 {
+      padding-bottom: 0.5rem;
+      span {
+        font-weight: 100;
+      }
+    }
+    #nabila {
+      text-align: left;
+    }
+    #fauzi {
+      text-align: right;
+    }
+  }
+
+  #wdt {
+    @include flexcont(column, center, normal);
+    text-align: center;
+    gap: 2rem;
+    h3 {
+      padding-bottom: 1rem;
+    }
+    h4, p{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    p {
+      letter-spacing: 0.2rem;
+      font-size: 0.8rem;
+    }
+    .wdt-info {
+      padding: 0.5rem 0;
+    }
+    svg {
+      margin-bottom: 0.7rem;
+    }
+    #wdt-dan {
+      font-size: 4rem;
+      font-weight: 100;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+    #wdt-waktu {
+      text-align: center;
+    }
+    #wdt-tempat {
+      text-align: center;
+    }
+
+  #ctd {
+    text-align: center;
+    p {
+      text-align: center;
+    }
+    #cds {
+      @include flexcont(row, space-between, center);
+      padding: 0 15vw!important;
+      margin-bottom: 0.2rem;
+      p {
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 0;
+        span {font-size: 12px;}
+      }
+    }
+
+  }
+
+  }
+
+
+  #closing {
+    font-size: 12px;
+    text-align: center;
+  }
+
+}

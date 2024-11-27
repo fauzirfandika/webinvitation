@@ -1,80 +1,43 @@
 ---
-import '../styles/global.css'
+import '../styles/global.scss'
+import Cover from '../components/above.astro'
+import Content from '../components/under.astro'
+import Count from '../scripts/countdown.astro'
 ---
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Nabila Fauzi</title>
-	</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-	<body>
-		<div id="above" class="snap">
-			<div class="petals-front">
-				<div><img src="images/petals/ptl1.png"></div>
-				<div><img src="images/petals/ptl2.png"></div>
-				<div><img src="images/petals/ptl3.png"></div>
-				<div><img src="images/petals/ptl4.png"></div>
-				<div><img src="images/petals/ptl5.png"></div>
-				<div><img src="images/petals/ptl6.png"></div>
-				<div><img src="images/petals/ptl7.png"></div>
-				<div><img src="images/petals/ptl8.png"></div>
-				<div><img src="images/petals/ptl9.png"></div>
-			</div>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nabila Fauzi</title>
+  </head>
 
-			<div class="cover">
-				<div class="cover-item">
-					<p>Kepada</p>
-					<h2>NAMA UNDANGAN</h2>
-				</div>
-				<div class="cover-item">
-					<p>dalam bahagia,</p>
-					<h1>
-						<span class="cover-cp">Nabila</span>
-						<br>
-						<span class="cover-and">&</span>
-						<br>
-						<span class="cover-cp">Fauzi</span>
-					</h1>
-					<p>beserta keluarga, mengundang anda untuk ikut merayakan pernikahan kami.</p>
-				</div>
-				<div class="cover-item">
-					<p class="cover-date">21|12|24</p>
-					<p class="cover-place">UNCLE D SPACE</p>
-				</div>
-			</div>
-
-			<div class="petals-back">
-				<div><img src="images/petals/ptl1.png"></div>
-				<div><img src="images/petals/ptl3.png"></div>
-				<div><img src="images/petals/ptl5.png"></div>
-				<div><img src="images/petals/ptl7.png"></div>
-				<div><img src="images/petals/ptl9.png"></div>
-			</div>
-
-			<div class="above-empty"></div>
-		</div>
-
-		<div id="under" class="snap">
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae quos incidunt nobis officiis mollitia pariatur culpa totam aperiam nostrum aliquam? Debitis in, aliquam aliquid pariatur illum quis. Sit atque delectus non laudantium itaque voluptate tempore, totam deserunt, nemo accusamus quod ut aut quos reprehenderit dignissimos? Optio impedit dignissimos mollitia consequatur deleniti provident, nemo laboriosam quis repellat necessitatibus officia tempore asperiores voluptas iste excepturi iure cupiditate magnam quisquam consectetur facere vero accusamus! Sapiente libero aut quibusdam alias ipsum inventore dolor. Fuga, exercitationem perferendis. Dolorum placeat alias atque vel veritatis magnam dolor, nesciunt incidunt. Eveniet, sunt numquam. Voluptates illum deleniti enim reiciendis.</p>
-		</div>
-	</body>
+  <body>
+    <Cover namaU="Nama Undangan"/>
+    <Content/>
+  </body>
 </html>
 
 <script>
-window.addEventListener("scroll", function () {
-	let deviceHeight = window.innerHeight;
-	let scrollPos = window.scrollY;
-	if (scrollPos >= deviceHeight) {
-		document.getElementById("under").classList.add("foc");
-	}
+  window.addEventListener("scroll", function () {
+    let deviceHeight = window.innerHeight;
+    let scrollPos = window.scrollY;
+    if (scrollPos >= deviceHeight) {
+      document.getElementById("under").classList.add("foc");
+    }
     else {
-        document.getElementById("under").classList.remove("foc");
-	}
-});
+      document.getElementById("under").classList.remove("foc");
+    }
+  });
 </script>
+
+  <Count/>

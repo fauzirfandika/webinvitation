@@ -1,0 +1,16 @@
+@use './resets';
+@use './petals';
+@use './above';
+@use './under';
+
+body {
+  font-family: "Playfair Display", serif;
+  h4, p {
+    font-family: serif;
+  }
+};
+
+.foc {
+  position: absolute!important;
+  top: 100vh!important;
+};
