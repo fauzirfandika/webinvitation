@@ -50,12 +50,13 @@ h3 {
 
 #under {
   @include flexcont();
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   background: #fffef7;
   position: fixed;
   top: 0;
   padding-bottom: 5vh;
+  overflow-x: hidden;
 
   #hero {
     padding-top: 5vh;
@@ -113,7 +114,7 @@ h3 {
     .wdt-info {
       padding: 0.5rem 0;
     }
-    svg {
+    img {
       margin-bottom: 0.7rem;
     }
     #wdt-dan {

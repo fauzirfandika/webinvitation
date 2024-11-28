@@ -1,13 +1,19 @@
-@use './resets';
-@use './petals';
 @use './above';
 @use './under';
+@use './animation';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 body {
   font-family: "Playfair Display", serif;
-  h4, p {
-    font-family: serif;
-  }
+  h4, p {font-family: serif;}
+  width: 100%;
+  overflox-x: hidden;
 };
 
 .foc {
